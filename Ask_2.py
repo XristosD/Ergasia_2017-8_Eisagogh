@@ -22,17 +22,10 @@ for i in lista:
         cList=cList+i
 
 lList=cList.split(',')
+lList=[int(i) for i in lList]
 tplLista=[]
 for i in range(0,4):
-   tplLista.append(tuple(['{}:00pm'.format(i+4),int(max(lList[1+i*6:6+i*6]))]))
+   tplLista.append(tuple(['{}:00pm'.format(i+4),max(lList[i*6:6+i*6])]))
 
 print(tplLista)
   
-
-
-
-
-
-
-
-
